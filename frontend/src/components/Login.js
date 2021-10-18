@@ -1,4 +1,5 @@
 import React from 'react';
+// import axios from 'axios';
 import { Card, Form, FormGroup, Label, Input, Button} from 'reactstrap';
 
 class Login extends React.Component {
@@ -20,13 +21,21 @@ class Login extends React.Component {
 
     login = e => {
         e.preventDefault();
+        // axios.post('http://anytimefitness.herokuapp.com/login')
+        //     .then(res => {
+        //         console.log(res);
+        //     })
+        //     .catch(err => {
+        //         console.log(err)
+        //     })
     };
 
     render(){
         return(
             <div className='loginContainer'>
                 <Card body className='text-center'>
-                    <Form>
+                    <Form onSubmit={this.login}>
+                        <h2>LOGIN</h2>
                         <FormGroup>
                             <Label for='username'>Username</Label>
                             <Input 
