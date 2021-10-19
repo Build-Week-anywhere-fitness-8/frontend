@@ -1,13 +1,18 @@
+
 import React, {useState} from 'react';
 import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
 
 import Login from './components/Login';
 import Register from './components/Register';
+import Home from "./Home";
 
 import './App.css';
 
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 function App() {
 
@@ -24,11 +29,15 @@ function App() {
     <Router>
       
       <div className="App">
+
         {/* @ unit 2 - feel free to change styling on anything you'd like -monica */}
         
         <header>
           <h1>Anywhere Fitness</h1>
           <Nav pills className="navBar">
+        <NavItem>
+        <NavLink href="#"><Link className = 'item' to="/">Home</Link></NavLink>
+        </NavItem>
         <NavItem>
         <NavLink href="#"><Link className = 'item' to='/login'>Login</Link></NavLink>
         </NavItem>
@@ -62,11 +71,13 @@ function App() {
           <NavLink href="#"><Link className = 'item' to='/about'>About</Link></NavLink>
         </NavItem>
       </Nav>
+
         </header>
+
         <Switch>
-          <Route path='/register' component={Register}/>
-          <Route path='/login' component={Login}/>
-          <Route path='/' component={Login}/>
+          <Route path="/register" component={Register} />
+          <Route path="/login" component={Login} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </div>
     </Router>
