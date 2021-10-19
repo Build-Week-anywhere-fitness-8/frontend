@@ -26,6 +26,7 @@ class Register extends React.Component {
       )
       .then((res) => {
         console.log(localStorage);
+        this.props.history.push('/classlist')
       })
       .catch((err) => {
         console.log(err);

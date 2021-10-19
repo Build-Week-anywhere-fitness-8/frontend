@@ -1,5 +1,5 @@
 import React from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import { Card, Form, FormGroup, Label, Input, Button} from 'reactstrap';
 import './Login.css'
 class Login extends React.Component {
@@ -21,13 +21,16 @@ class Login extends React.Component {
 
     login = e => {
         e.preventDefault();
-        // axios.post('http://anytimefitness.herokuapp.com/login')
-        //     .then(res => {
-        //         console.log(res);
-        //     })
-        //     .catch(err => {
-        //         console.log(err)
-        //     })
+        axios.post('http://anytimefitness.herokuapp.com/login', this.state.credentials)
+            .then(res => {
+                console.log(res);
+                localStorage.setItem('token', res.data.token);
+
+                this.props.history.push('/classlist')
+            })
+            .catch(err => {
+                console.log(err)
+            })
     };
 
     render(){
