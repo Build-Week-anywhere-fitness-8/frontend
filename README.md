@@ -99,3 +99,21 @@ https://anytimefitness.herokuapp.com/api/users/:id
 PUT - Updates the user
 
 https://anytimefitness.herokuapp.com/api/users/:id
+
+<br>
+
+## PROTECTED USER ENDPOINTS
+
+<br>
+
+POST - Registers new user
+
+https://anytimefitness.herokuapp.com/api/auth/register
+
+POST - Log in user
+
+https://anytimefitness.herokuapp.com/api/auth/login
+
+POST - Log out user
+
+https://anytimefitness.herokuapp.com/api/auth/logout
