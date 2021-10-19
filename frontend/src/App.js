@@ -10,14 +10,14 @@ function App() {
   return (
     <Router>
       <div className="App">
-        {/* @ unit 2 - feel free to change styling on anything you'd like -monica */}
-        <header>
-          <h1>Anywhere Fitness</h1>
+        <header className="header">
           <nav>
             <Link to="/login">Login</Link>
             <Link to="/register">Register</Link>
           </nav>
+          <h1>Anywhere Fitness</h1>
         </header>
+
         <Switch>
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
