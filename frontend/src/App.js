@@ -1,8 +1,9 @@
 import React from 'react';
-import {BrowserRouter as Router, Link, Switch, Route} from 'react-router-dom';
-
+import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
+import About from './components/About'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
 
@@ -19,9 +20,10 @@ function App() {
           </nav>
         </header>
         <Switch>
-          <Route path='/register' component={Register}/>
-          <Route path='/login' component={Login}/>
-          <Route path='/' component={Login}/>
+          <Route path='/about' component={About} />
+          <Route path='/register' component={Register} />
+          <Route path='/login' component={Login} />
+          <Route path='/' component={Login} />
         </Switch>
       </div>
     </Router>
