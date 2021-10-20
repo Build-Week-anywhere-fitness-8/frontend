@@ -1,23 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
+
 import Login from './components/Login';
 import Register from './components/Register';
 import About from './components/About'
 import Home from './components/Home';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from './components/PrivateRoute';
 import Logout from './components/Logout';
 import ClassList from './components/ClassList';
 import ClassForm from './components/AddClassForm';
 
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
-
-
-
 
 
 function App() {
@@ -44,13 +40,8 @@ function App() {
 }, [])
 
   return (
-
     <Router>
-
       <div className="App">
-
-        {/* @ unit 2 - feel free to change styling on anything you'd like -monica */}
-
         <header>
           <h1>Anywhere Fitness</h1>
           <Nav pills className="navBar">
@@ -62,12 +53,12 @@ function App() {
             </NavItem>
 
             <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}>
-              <DropdownToggle nav caret>
-                <span className='item'>Classes</span>
+              <DropdownToggle nav >
+                <Link className='item' to='/classlist'>Classes</Link>
               </DropdownToggle>
-              <DropdownMenu>
+              {/* <DropdownMenu>
                 {classList.map(c => {<DropdownItem>{c.class_name}</DropdownItem>})}
-              </DropdownMenu>
+              </DropdownMenu> */}
             </Dropdown>
 
             <Dropdown nav isOpen={dropdownLocations} toggle={toggleLocations}>
@@ -89,21 +80,13 @@ function App() {
         </header>
 
         <Switch>
-
-          
-          <Route path='/about' component={About} />
-          <Route path='/register' component={Register} />
-          <Route path='/login' component={Login} />
-          <Route path='/' component={Home} />
-
           <PrivateRoute path='/logout' component={Logout} />
           <PrivateRoute path='/add-class' component={ClassForm}/>
-          <Route path='classlist' component={ClassList}/>
+          <Route path='/classlist' component={ClassList}/>
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
-          <Route path='/' component={Login} />
-
+          <Route path='/' component={Home} />
         </Switch>
       </div>
     </Router>

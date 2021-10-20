@@ -29,8 +29,9 @@ const ClassForm = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         axiosWithAuth()
-            .post("http://anytimefitness.herokuapp.com/api/classes", classState)
+            .post("https://anytimefitness.herokuapp.com/api/classes/create", classState)
                 .then(res => {
+                    console.log('i added a class')
                     props.setClassList(res.data);
                     push('/classlist');
                 })
