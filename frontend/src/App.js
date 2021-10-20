@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import About from './components/About'
+import Home from './components/Home';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './App.css';
@@ -37,12 +39,6 @@ function App() {
             <NavItem>
               <NavLink href="#"><Link className='item' to="/">Home</Link></NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="#"><Link className='item' to='/login'>Login</Link></NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#"><Link className='item' to='/register'>Register</Link></NavLink>
-            </NavItem>
 
             <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}>
               <DropdownToggle nav caret>
@@ -74,10 +70,11 @@ function App() {
         </header>
 
         <Switch>
+          
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
-          <Route path='/' component={Login} />
+          <Route path='/' component={Home} />
         </Switch>
       </div>
     </Router>
