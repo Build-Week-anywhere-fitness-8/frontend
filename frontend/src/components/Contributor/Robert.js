@@ -32,7 +32,7 @@ const Robert = (props) => {
                     <CardTitle>{robertInfo.name}</CardTitle>
                     <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/RobertVonDerBecke'>https://github.com/RobertVonDerBecke</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {robertInfo.location}</CardSubtitle>
-                    <CardText></CardText>
+                    <CardText>Robert worked on the frontend.</CardText>
                 </CardBody>
             </Card>
         </>

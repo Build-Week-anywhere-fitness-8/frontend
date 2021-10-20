@@ -32,7 +32,7 @@ const Monica = (props) => {
                     <CardTitle>{monicaInfo.name}</CardTitle>
                     <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/monicasalas86'>https://github.com/monicasalas86</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {monicaInfo.location}</CardSubtitle>
-                    <CardText></CardText>
+                    <CardText>Monica worked on the frontend with Redux and routing the website.</CardText>
                 </CardBody>
             </Card>
         </>
