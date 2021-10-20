@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 import { Card, Form, FormGroup, Label, Input, Button } from "reactstrap";
 
+import './Register.css'
 class Register extends React.Component {
   state = {
     name: "",

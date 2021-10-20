@@ -4,6 +4,8 @@ import { BrowserRouter as Router, Link, Switch, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import About from './components/About'
+import Home from './components/Home';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from './components/PrivateRoute';
 import Logout from './components/Logout';
@@ -56,12 +58,6 @@ function App() {
               <NavLink href="#"><Link className='item' to="/">Home</Link></NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="#"><Link className='item' to='/login'>Login</Link></NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#"><Link className='item' to='/register'>Register</Link></NavLink>
-            </NavItem>
-            <NavItem>
               <NavLink href="#"><Link className='item' to='/logout'>Logout</Link></NavLink>
             </NavItem>
 
@@ -93,6 +89,13 @@ function App() {
         </header>
 
         <Switch>
+
+          
+          <Route path='/about' component={About} />
+          <Route path='/register' component={Register} />
+          <Route path='/login' component={Login} />
+          <Route path='/' component={Home} />
+
           <PrivateRoute path='/logout' component={Logout} />
           <PrivateRoute path='/add-class' component={ClassForm}/>
           <Route path='classlist' component={ClassList}/>
@@ -100,6 +103,7 @@ function App() {
           <Route path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
           <Route path='/' component={Login} />
+
         </Switch>
       </div>
     </Router>
