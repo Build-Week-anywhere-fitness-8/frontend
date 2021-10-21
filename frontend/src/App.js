@@ -32,16 +32,16 @@ function App() {
 
   useEffect(() => {
     axios.get('http://anytimefitness.herokuapp.com/api/classes')
-        .then(res => {
-            setClassList([
-                ...classList,
-                res.data
-            ]);
-        })
-        .catch(err => {
-            console.error(err);
-        })
-}, [])
+      .then(res => {
+        setClassList([
+          ...classList,
+          res.data
+        ]);
+      })
+      .catch(err => {
+        console.error(err);
+      })
+  }, [])
 
   return (
 
@@ -66,7 +66,7 @@ function App() {
                 <span className='item'>Classes</span>
               </DropdownToggle>
               <DropdownMenu>
-                {classList.map(c => {<DropdownItem>{c.class_name}</DropdownItem>})}
+                {classList.map(c => { <DropdownItem>{c.class_name}</DropdownItem> })}
               </DropdownMenu>
             </Dropdown>
 
@@ -90,15 +90,15 @@ function App() {
 
         <Switch>
 
-          
+
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
           <Route path='/' component={Home} />
 
           <PrivateRoute path='/logout' component={Logout} />
-          <PrivateRoute path='/add-class' component={ClassForm}/>
-          <Route path='classlist' component={ClassList}/>
+          <PrivateRoute path='/add-class' component={ClassForm} />
+          <Route path='classlist' component={ClassList} />
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
