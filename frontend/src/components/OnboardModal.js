@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import ClassCarousel from './ClassCarousel';
 
 const OnboardModal = (props) => {
 
@@ -25,9 +26,10 @@ const OnboardModal = (props) => {
                 <ModalBody>
                     Check out the onboarding below, otherwise feel free to skip this.
                     <br />
-                    <Button color="primary" onClick={toggleNested}>Check it out</Button>
+                    <Button color="primary" className='my-3' onClick={toggleNested}>Check it out</Button>
                     <Modal isOpen={nestedModal} toggle={toggleNested} onClosed={closeAll ? toggle : undefined}>
                         <ModalHeader>Welcome!</ModalHeader>
+                        <ClassCarousel />
                         <ModalBody>Sign up for classes in the classes section by picking a class time, date, duration, type, level, and location.</ModalBody>
                         <ModalFooter>
                             <Button color="secondary" onClick={toggleAll}>Close</Button>

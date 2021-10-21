@@ -42,7 +42,6 @@ const About = () => {
                 <div>
                     <p>Copyright© 2020</p>
                 </div>
-                <OnboardModal />
             </footer>
         </>
     )
