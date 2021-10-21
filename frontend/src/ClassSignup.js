@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Button, Form, FormGroup, Label, Input, } from 'reactstrap';
 
 
 const ClassSignup = (props) => {
@@ -16,21 +16,29 @@ const ClassSignup = (props) => {
             return <option key={index} value={item.class_id}>{item.class_location}</option>
         })
 
+    const classType = null
+
+
     return (
         <>
             <Form>
                 <h2>Class Sign-up</h2>
-                <FormGroup>
+                <FormGroup style={{ marginLeft: '40%', marginRight: '40%' }}>
                     <Label>Class</Label>
-                    <select>
+                    <Input style={{ textAlign: 'center' }} type='select' name='class-select'>
+                        <option>Select a class</option>
                         {classList}
-                    </select>
+                    </Input>
+                </FormGroup>
+                <FormGroup style={{ marginLeft: '40%', marginRight: '40%' }}>
+                    <Label>Location</Label>
+                    <Input style={{ textAlign: 'center' }} type='select' name='location-select'>
+                        <option>Select a location</option>
+                        {locationList}
+                    </Input>
                 </FormGroup>
                 <FormGroup>
-                    <Label>Location</Label>
-                    <Input type='select' name='location-select'>
-
-                    </Input>
+                    { }
                 </FormGroup>
             </Form>
         </>
