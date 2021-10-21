@@ -67,10 +67,9 @@ const ClassForm = (props) => {
                             onChange={changeHandle}
                         >
                             <option>Cardio</option>
-                            <option>Aerobic</option>
-                            <option>Anaerobic</option>
-                            <option>Strength</option>
-                            <option>Lifestyle</option>
+                            <option>Stregth</option>
+                            <option>Yoga</option>
+                            <option>Calisthenics</option>
                         </Input>
                     </FormGroup>
                     <FormGroup>
