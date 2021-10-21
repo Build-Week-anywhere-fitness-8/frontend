@@ -3,41 +3,44 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 const OnboardModal = (props) => {
 
-    const {
-        buttonLabel,
-        className
-    } = props;
+    const [modal, setModal] = useState(false);
+    const [nestedModal, setNestedModal] = useState(false);
+    const [closeAll, setCloseAll] = useState(false);
 
-    const [modal, setModal] = useState(true)
-    const [nestedModal, setNestModal] = useState(false)
-    const [closeAll, setCloseAll] = useState(false)
-
-    const toggle = () => setModal(!modal)
+    const toggle = () => setModal(!modal);
     const toggleNested = () => {
-        setNestModal(!nestedModal)
-        setCloseAll(false)
+        setNestedModal(!nestedModal);
+        setCloseAll(false);
     }
-
     const toggleAll = () => {
-        setNestedModal(!nestedModal)
-        setCloseAll(true)
+        setNestedModal(!nestedModal);
+        setCloseAll(true);
     }
 
     return (
-        <>
-            <div>
-                <Button color="danger" onClick={toggle}>{buttonLabel}</Button>
-                <Modal>
-                    <ModalHeader>Welcome!</ModalHeader>
-                    <ModalBody>If you would like to learn more about how to use our app and out classes click below, otherwise have fun!
-                        <br />
-                        <Button></Button>
-                    </ModalBody>
-                </Modal>
-            </div>
-        </>
-    )
-
+        <div>
+            <Button color="primary" onClick={toggle}>First Time?</Button>
+            <Modal isOpen={modal} toggle={toggle}>
+                <ModalHeader toggle={toggle}>First time here?</ModalHeader>
+                <ModalBody>
+                    Check out the onboarding below, otherwise feel free to skip this.
+                    <br />
+                    <Button color="primary" onClick={toggleNested}>Check it out</Button>
+                    <Modal isOpen={nestedModal} toggle={toggleNested} onClosed={closeAll ? toggle : undefined}>
+                        <ModalHeader>Welcome!</ModalHeader>
+                        <ModalBody>Sign up for classes in the classes section by picking a class time, date, duration, type, level, and location.</ModalBody>
+                        <ModalFooter>
+                            <Button color="secondary" onClick={toggleAll}>Close</Button>
+                        </ModalFooter>
+                    </Modal>
+                </ModalBody>
+                <ModalFooter>
+                    <Button color="secondary" onClick={toggle}>Close</Button>
+                </ModalFooter>
+            </Modal>
+        </div>
+    );
 }
+
 
 export default OnboardModal
