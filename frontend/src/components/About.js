@@ -8,6 +8,7 @@ import TraNequa from './Contributor/TraNequa';
 import Robert from './Contributor/Robert';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Jumbotron, Nav, NavLink, NavItem } from 'reactstrap';
+import OnboardModal from './OnboardModal';
 
 const About = () => {
 
