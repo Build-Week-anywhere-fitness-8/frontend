@@ -35,7 +35,7 @@ function App() {
         console.error(err);
       })
   }, [])
-
+  console.log(classList)
   return (
     <Router>
       <div className="App">
@@ -63,7 +63,7 @@ function App() {
 
           <PrivateRoute path='/logout' component={Logout} />
           <PrivateRoute path='/add-class' component={ClassForm} />
-          <Route path='classlist' component={ClassList} />
+          <Route path='/classlist' component={ClassList} />
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
