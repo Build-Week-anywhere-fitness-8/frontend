@@ -9,6 +9,7 @@ class Register extends React.Component {
     email: "",
     username: "",
     password: "",
+    role: ""
   };
 
   handleChange = (e) => {
@@ -83,6 +84,14 @@ class Register extends React.Component {
                 value={this.state.password}
                 onChange={this.handleChange}
               />
+            </FormGroup>
+            <FormGroup>
+              <Label for="role">Role</Label>
+              <Input type="select" name="role" id="role" value={this.state.role}
+              onChange={this.handleChange} >
+              <option>Client</option>
+              <option>Instructor</option>
+              </Input>
             </FormGroup>
             <Button>Submit</Button>
           </Form>

@@ -32,7 +32,7 @@ const TraNequa = (props) => {
                     <CardTitle>{traNequaInfo.name}</CardTitle>
                     <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/TraNequaFauntleroy'>https://github.com/TraNequaFauntleroy</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {traNequaInfo.location}</CardSubtitle>
-                    <CardText></CardText>
+                    <CardText>TraNequa worked on creating the backend for the aplication using Node.js.</CardText>
                 </CardBody>
             </Card>
         </>
