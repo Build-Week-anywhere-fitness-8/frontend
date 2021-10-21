@@ -7,6 +7,7 @@ const Logout = (props) => {
         axiosWithAuth()
             .post('http://anytimefitness.herokuapp.com/logout')
             .then(res=>{
+                console.log(res)
                 localStorage.removeItem("token");
                 props.history.push('/login');
             }).catch(err=> {

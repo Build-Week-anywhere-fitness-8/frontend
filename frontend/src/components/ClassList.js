@@ -8,7 +8,7 @@ const ClassList = (props) => {
     let isLoggedIn = localStorage.getItem('token');
 
     useEffect(() => {
-        axios.get('http://anytimefitness.herokuapp.com/api/classes')
+        axios.get('https://anytimefitness.herokuapp.com/api/classes')
             .then(res => {
                 setClasses(res.data);
             })
@@ -16,11 +16,9 @@ const ClassList = (props) => {
                 console.error(err);
             })
     }, [])
-
     if(classes.length === 0){
         return <h2>No Classes Available at This Time</h2>
     }
-    console.log(classes);
     return(
         <div>
             <div>
