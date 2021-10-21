@@ -25,16 +25,16 @@ function App() {
 
   useEffect(() => {
     axios.get('http://anytimefitness.herokuapp.com/api/classes')
-        .then(res => {
-            setClassList([
-                ...classList,
-                res.data
-            ]);
-        })
-        .catch(err => {
-            console.error(err);
-        })
-}, [])
+      .then(res => {
+        setClassList([
+          ...classList,
+          res.data
+        ]);
+      })
+      .catch(err => {
+        console.error(err);
+      })
+  }, [])
 
   return (
     <Router>
@@ -48,6 +48,7 @@ function App() {
             <NavItem>
               <NavLink href="#"><Link className='item' to='/logout'>Logout</Link></NavLink>
             </NavItem>
+
             <NavItem>
               <NavLink href="#"><Link className='item' to='/classlist'>Classes</Link></NavLink>
             </NavItem>
@@ -59,9 +60,10 @@ function App() {
         </header>
 
         <Switch>
+
           <PrivateRoute path='/logout' component={Logout} />
-          <PrivateRoute path='/add-class' component={ClassForm}/>
-          <Route path='/classlist' component={ClassList}/>
+          <PrivateRoute path='/add-class' component={ClassForm} />
+          <Route path='classlist' component={ClassList} />
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route exact path='/login' component={Login} />
