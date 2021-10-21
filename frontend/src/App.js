@@ -13,7 +13,7 @@ import ClassForm from './components/AddClassForm';
 
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
 
 function App() {

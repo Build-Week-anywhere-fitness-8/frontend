@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import DisplayClass from "./DisplayClass";
 import { Link } from "react-router-dom";
+import {Button} from 'reactstrap';
 
 const ClassList = (props) => {
     const [classes, setClasses] = useState([]);
@@ -27,7 +28,9 @@ const ClassList = (props) => {
                 ))}
             </div>
             <div>
-                {isLoggedIn && <Link to='/add-class'>Add a new Class</Link>}
+                <Button>
+                    {isLoggedIn && <Link to='/add-class'>Add a new Class</Link>}
+                </Button>
             </div>
         </div>
     )
