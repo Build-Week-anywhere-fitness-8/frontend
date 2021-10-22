@@ -13,7 +13,7 @@ const DisplayClass = (props) => {
                 Type: {course.class_type}<br/>
                 Duration: {course.class_duration}<br/>
                 Intensity: {course.class_intensity}<br/>
-                Maximum Occupancy: {course.class_max}
+                Maximum Occupancy: {course.class_max_attendees}
             </CardText>
         </Card>
     )

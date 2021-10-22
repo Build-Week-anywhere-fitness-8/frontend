@@ -7,7 +7,6 @@ import {Button} from 'reactstrap';
 const ClassList = (props) => {
     const [classes, setClasses] = useState([]);
     let isLoggedIn = localStorage.getItem('token');
-
     useEffect(() => {
         axios.get('https://anytimefitness.herokuapp.com/api/classes')
             .then(res => {
@@ -24,13 +23,11 @@ const ClassList = (props) => {
         <div>
             <div>
                 {classes && classes.map(c => (
-                    <DisplayClass key={c.class_id} course={c} />
+                    <DisplayClass key={c.class_id} course={c} classes={classes} />
                 ))}
             </div>
             <div>
-                <Button>
-                    {isLoggedIn && <Link to='/add-class'>Add a new Class</Link>}
-                </Button>
+                {isLoggedIn && <Button><Link to='/add-class'>Add a new Class</Link></Button>}
             </div>
         </div>
     )
