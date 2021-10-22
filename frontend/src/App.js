@@ -57,10 +57,6 @@ function App() {
             <NavItem>
               <NavLink href="#"><Link className='item' to="/">Home</Link></NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="#"><Link className='item' to='/logout'>Logout</Link></NavLink>
-            </NavItem>
-
             <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}>
               <DropdownToggle nav caret>
                 <span className='item'>Classes</span>
@@ -89,20 +85,13 @@ function App() {
         </header>
 
         <Switch>
-
-          
+          <PrivateRoute path='/logout' component={Logout} />
+          <PrivateRoute path='/add-class' component={ClassForm}/>
+          <Route path='/classlist' component={ClassList}/>
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
           <Route path='/' component={Home} />
-
-          <PrivateRoute path='/logout' component={Logout} />
-          <PrivateRoute path='/add-class' component={ClassForm}/>
-          <Route path='classlist' component={ClassList}/>
-          <Route path='/about' component={About} />
-          <Route path='/register' component={Register} />
-          <Route exact path='/login' component={Login} />
-          <Route path='/' component={Login} />
 
         </Switch>
       </div>

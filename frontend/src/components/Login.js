@@ -21,7 +21,7 @@ class Login extends React.Component {
 
     login = e => {
         e.preventDefault();
-        axios.post('http://anytimefitness.herokuapp.com/login', this.state.credentials)
+        axios.post('https://anytimefitness.herokuapp.com/api/auth/login', this.state.credentials)
             .then(res => {
                 console.log(res);
                 localStorage.setItem('token', res.data.token);
