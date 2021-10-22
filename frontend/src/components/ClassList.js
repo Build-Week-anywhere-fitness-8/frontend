@@ -25,11 +25,6 @@ const ClassList = (props) => {
     }
     return (
         <div className='bg-secondary'>
-            {/* <div>
-                {classes && classes.map(c => (
-                    <DisplayClass key={c.class_id} course={c} classes={classes} />
-                ))}
-            </div> */}
             <ClassSignup classes={classes}></ClassSignup>
             <div>
                 {isLoggedIn && <Button><Link to='/add-class'>Add a new Class</Link></Button>}

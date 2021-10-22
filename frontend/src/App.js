@@ -14,10 +14,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import { Nav, NavItem, NavLink } from 'reactstrap';
 
-
-
-
-
 function App() {
 
   const [classList, setClassList] = useState([])
@@ -34,7 +30,6 @@ function App() {
         console.error(err);
       })
   }, [])
-  console.log(classList)
   return (
 
     <Router>
@@ -70,7 +65,6 @@ function App() {
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
           <Route path='/' component={Home} />
-
         </Switch>
       </div>
     </Router >
