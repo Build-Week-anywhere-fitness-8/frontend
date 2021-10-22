@@ -12,12 +12,17 @@ import ClassForm from './components/AddClassForm';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+
 import { Nav, NavItem, NavLink } from 'reactstrap';
+
+
+
+
 
 function App() {
 
   const [classList, setClassList] = useState([])
-  
+
   useEffect(() => {
     axios.get('http://anytimefitness.herokuapp.com/api/classes')
       .then(res => {
