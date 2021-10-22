@@ -14,7 +14,7 @@ import ClassForm from './components/AddClassForm';
 
 import './App.css';
 
-import { Nav, NavItem, Dropdown, DropdownItem, DropdownToggle, DropdownMenu, NavLink } from 'reactstrap';
+import { Nav, NavItem, NavLink } from 'reactstrap';
 
 
 
@@ -58,9 +58,6 @@ function App() {
             <NavItem>
               <NavLink href="#"><Link className='item' to="/">Home</Link></NavLink>
             </NavItem>
-            {/* The nav section requires further refactoring or deletion of some nav items */}
-            {/* <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}> */}
-            {/* <DropdownToggle nav caret> */}
             <NavItem>
               <NavLink href='#'>
                 <Link className='item' to='/classlist'>
@@ -68,23 +65,6 @@ function App() {
                 </Link>
               </NavLink>
             </NavItem>
-            {/* </DropdownToggle> */}
-            {/* <DropdownMenu>
-                {classList.map(c => { <DropdownItem>{c.class_name}</DropdownItem> })}
-              </DropdownMenu>
-            </Dropdown> */}
-
-            {/* <Dropdown nav isOpen={dropdownLocations} toggle={toggleLocations}>
-              <DropdownToggle nav caret>
-                <span className='item'>Locations</span>
-              </DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem></DropdownItem>
-                <DropdownItem>Miami</DropdownItem>
-                <DropdownItem>New York</DropdownItem>
-                <DropdownItem>California</DropdownItem>
-              </DropdownMenu>
-            </Dropdown> */}
             <NavItem>
               <NavLink href="#"><Link className='item' to='/about'>About</Link></NavLink>
             </NavItem>

@@ -34,7 +34,16 @@ const ClassList = (props) => {
             <ClassSignup classes={classes}></ClassSignup>
             <div>
 
-                {isLoggedIn && <Button><Link to='/add-class'>Add a new Class</Link></Button>}
+                {isLoggedIn && <Button className='bg-light'>
+                    <Link
+                        style={{
+                            textDecoration: 'none',
+                            color: 'black'
+                        }}
+                        to='/add-class'>
+                        Add a new Class
+                    </Link>
+                </Button>}
 
             </div>
             <div className='py-3'><Cards /></div>
