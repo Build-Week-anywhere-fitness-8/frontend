@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import axiosWithAuth from './../utils/axiosWithAuth';
-
+import Login from "./Login";
 const Logout = (props) => {
 
     useEffect(()=> {
@@ -15,7 +15,8 @@ const Logout = (props) => {
             })
     }, []);
 
-    return(<div></div>);
+    return(
+    <Login />);
 }
 
 export default Logout;

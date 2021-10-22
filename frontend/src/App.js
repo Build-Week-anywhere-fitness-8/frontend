@@ -45,13 +45,28 @@ function App() {
             <NavItem>
               <NavLink href="#"><Link className='item' to="/">Home</Link></NavLink>
             </NavItem>
-            <NavItem>
-              <NavLink href="#"><Link className='item' to='/logout'>Logout</Link></NavLink>
-            </NavItem>
 
-            <NavItem>
-              <NavLink href="#"><Link className='item' to='/classlist'>Classes</Link></NavLink>
-            </NavItem>
+            <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}>
+              <DropdownToggle nav caret>
+                <span className='item'>Classes</span>
+              </DropdownToggle>
+              <DropdownMenu>
+                {classList.map(c => {<DropdownItem>{c.class_name}</DropdownItem>})}
+              </DropdownMenu>
+            </Dropdown>
+
+            <Dropdown nav isOpen={dropdownLocations} toggle={toggleLocations}>
+              <DropdownToggle nav caret>
+                <span className='item'>Locations</span>
+              </DropdownToggle>
+              <DropdownMenu>
+                <DropdownItem></DropdownItem>
+                <DropdownItem>Miami</DropdownItem>
+                <DropdownItem>New York</DropdownItem>
+                <DropdownItem>California</DropdownItem>
+              </DropdownMenu>
+            </Dropdown>
+
             <NavItem>
               <NavLink href="#"><Link className='item' to='/about'>About</Link></NavLink>
             </NavItem>
@@ -62,12 +77,14 @@ function App() {
         <Switch>
 
           <PrivateRoute path='/logout' component={Logout} />
-          <PrivateRoute path='/add-class' component={ClassForm} />
-          <Route path='classlist' component={ClassList} />
+          <PrivateRoute path='/add-class' component={ClassForm}/>
+          <Route path='/classlist' component={ClassList}/>
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
-          <Route exact path='/login' component={Login} />
+          <Route path='/login' component={Login} />
           <Route path='/' component={Home} />
+
+
         </Switch>
       </div>
     </Router>

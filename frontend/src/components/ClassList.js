@@ -4,6 +4,7 @@ import DisplayClass from "./DisplayClass";
 import { Link } from "react-router-dom";
 import {Button} from 'reactstrap';
 
+
 const ClassList = (props) => {
     const [classes, setClasses] = useState([]);
     let isLoggedIn = localStorage.getItem('token');
@@ -22,6 +23,9 @@ const ClassList = (props) => {
     }
     return(
         <div>
+            <div>
+            <Link className='item' to='/logout'>Logout</Link>
+            </div>
             <div>
                 {classes && classes.map(c => (
                     <DisplayClass key={c.class_id} course={c} />
