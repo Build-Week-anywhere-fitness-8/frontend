@@ -9,10 +9,10 @@ const DisplayClass = (props) => {
         <Card className='course-container'>
             <CardTitle>{course.class_name}</CardTitle>
             <CardText>
-                Location: {course.class_location}<br />
-                Type: {course.class_type}<br />
-                Duration: {course.class_duration}<br />
-                Intensity: {course.class_intensity}<br />
+                Location: {course.class_location}<br/>
+                Type: {course.class_type}<br/>
+                Duration: {course.class_duration}<br/>
+                Intensity: {course.class_intensity}<br/>
                 Maximum Occupancy: {course.class_max_attendees}
             </CardText>
         </Card>
