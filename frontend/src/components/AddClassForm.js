@@ -15,7 +15,6 @@ const initialClass = {
 const ClassForm = (props) => {    
 
     const [classState, setClassState] = useState(initialClass);
-
     const { push } = useHistory();
 
     const changeHandle = e => {
@@ -25,7 +24,6 @@ const ClassForm = (props) => {
             [e.target.name]: e.target.value
         })
     }
-
     const handleSubmit = e => {
         e.preventDefault();
         axiosWithAuth()

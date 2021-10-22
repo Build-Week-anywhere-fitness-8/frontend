@@ -5,13 +5,12 @@ import Login from './components/Login';
 import Register from './components/Register';
 import About from './components/About'
 import Home from './components/Home';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import PrivateRoute from './components/PrivateRoute';
 import Logout from './components/Logout';
 import ClassList from './components/ClassList';
 import ClassForm from './components/AddClassForm';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import { Nav, NavItem, NavLink } from 'reactstrap';
@@ -23,12 +22,6 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 function App() {
 
   const [classList, setClassList] = useState([])
-  const [dropdownOpen, setDropdownOpen] = useState(false);
-  const [dropdownLocations, setDropdownLocations] = useState(false);
-
-
-  const toggleClasses = () => setDropdownOpen(!dropdownOpen);
-  const toggleLocations = () => setDropdownLocations(!dropdownLocations);
 
   useEffect(() => {
     axios.get('http://anytimefitness.herokuapp.com/api/classes')
@@ -42,7 +35,6 @@ function App() {
         console.error(err);
       })
   }, [])
-  console.log(classList)
   return (
 
     <Router>
@@ -60,9 +52,7 @@ function App() {
             </NavItem>
             <NavItem>
               <NavLink href='#'>
-                <Link className='item' to='/classlist'>
-                  Classes
-                </Link>
+                <Link className='item' to='/classlist'>Classes</Link>
               </NavLink>
             </NavItem>
             <NavItem>
@@ -75,12 +65,11 @@ function App() {
         <Switch>
           <PrivateRoute path='/logout' component={Logout} />
           <PrivateRoute path='/add-class' component={ClassForm} />
-          <Route path='/classlist' component={ClassList} />
+          <PrivateRoute path='/classlist' component={ClassList} />
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
           <Route path='/' component={Home} />
-
         </Switch>
       </div>
     </Router >
