@@ -7,6 +7,7 @@ import ClassForm from "./AddClassForm";
 import ClassSignup from "./ClassSignup";
 import Cards from './HomeCards'
 
+
 const ClassList = (props) => {
     const [classes, setClasses] = useState([]);
     let isLoggedIn = localStorage.getItem('token');
