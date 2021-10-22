@@ -4,7 +4,7 @@ import DisplayClass from "./DisplayClass";
 import { Link } from "react-router-dom";
 import { Button } from 'reactstrap';
 import ClassForm from "./AddClassForm";
-import ClassSignup from "../ClassSignup";
+import ClassSignup from "./ClassSignup";
 import Cards from './HomeCards'
 
 const ClassList = (props) => {
