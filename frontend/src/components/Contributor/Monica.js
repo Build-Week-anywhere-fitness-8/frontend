@@ -22,7 +22,7 @@ const Monica = (props) => {
 
     return (
         <>
-            <Card className='mx-auto my-5 bg-secondary' style={{ width: '40%' }}>
+            <Card className='mx-auto my-5' style={{ width: '40%', backgroundColor: 'lightgray' }}>
                 <CardImg
                     src='https://avatars.githubusercontent.com/u/86384558?v=4'
                     alt='github user avatar'

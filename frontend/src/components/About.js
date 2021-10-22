@@ -16,7 +16,7 @@ const About = () => {
 
 
     return (
-        <div style={{ backgroundColor: 'lightgray' }}>
+        <div className='bg-secondary'>
             <Jumbotron className='p-4 bg-dark text-white'>
                 <h1>About</h1>
                 <p>This site was made by a student team from Lambda Web for a Build week project.

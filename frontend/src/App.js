@@ -54,21 +54,27 @@ function App() {
               Anywhere Fitness
             </Link>
           </h1>
-          <Nav pills className="navBar bg-dark">
+          <Nav pills className="navBar bg-dark d-flex justify-content-center">
             <NavItem>
               <NavLink href="#"><Link className='item' to="/">Home</Link></NavLink>
             </NavItem>
-
-            <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}>
-              <DropdownToggle nav caret>
-                <span className='item'>Classes</span>
-              </DropdownToggle>
-              <DropdownMenu>
+            {/* The nav section requires further refactoring or deletion of some nav items */}
+            {/* <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}> */}
+            {/* <DropdownToggle nav caret> */}
+            <NavItem>
+              <NavLink href='#'>
+                <Link className='item' to='/classlist'>
+                  Classes
+                </Link>
+              </NavLink>
+            </NavItem>
+            {/* </DropdownToggle> */}
+            {/* <DropdownMenu>
                 {classList.map(c => { <DropdownItem>{c.class_name}</DropdownItem> })}
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
 
-            <Dropdown nav isOpen={dropdownLocations} toggle={toggleLocations}>
+            {/* <Dropdown nav isOpen={dropdownLocations} toggle={toggleLocations}>
               <DropdownToggle nav caret>
                 <span className='item'>Locations</span>
               </DropdownToggle>
@@ -78,7 +84,7 @@ function App() {
                 <DropdownItem>New York</DropdownItem>
                 <DropdownItem>California</DropdownItem>
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
             <NavItem>
               <NavLink href="#"><Link className='item' to='/about'>About</Link></NavLink>
             </NavItem>
