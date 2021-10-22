@@ -32,7 +32,7 @@ const Chris = (props) => {
                     <CardTitle>{chrisInfo.name}</CardTitle>
                     <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/SaltStalactite'>https://github.com/SaltStalactite</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {chrisInfo.location}</CardSubtitle>
-                    <CardText></CardText>
+                    <CardText>Chris worked on the frontend with Reactstrap/Bootstrap to style the site.</CardText>
                 </CardBody>
             </Card>
         </>

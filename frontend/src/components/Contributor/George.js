@@ -33,7 +33,7 @@ const George = (props) => {
                     <CardTitle>{georgeInfo.name}</CardTitle>
                     <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/cavazosgeorge'>https://github.com/cavazosgeorge</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {georgeInfo.location}</CardSubtitle>
-                    <CardText></CardText>
+                    <CardText>George worked on creating the backend for the application using Node.js.</CardText>
                 </CardBody>
             </Card>
         </>

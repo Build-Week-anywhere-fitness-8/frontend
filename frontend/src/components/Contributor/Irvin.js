@@ -32,7 +32,7 @@ const Irvin = (props) => {
                     <CardTitle>{irvingInfo.name}</CardTitle>
                     <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/IrvinA'>https://github.com/IrvinA</CardLink></CardSubtitle>
                     {/* <CardSubtitle>Location: {irvingInfo.location}</CardSubtitle> */}
-                    <CardText></CardText>
+                    <CardText>Irvin worked on the fronted with Redux and routing the website.</CardText>
                 </CardBody>
             </Card>
         </>

@@ -2,14 +2,15 @@ import React, {useState, useEffect} from "react";
 import axios from 'axios'
 import DisplayClass from "./DisplayClass";
 import { Link } from "react-router-dom";
-import Logout from "./Logout";
+import {Button} from 'reactstrap';
+
 
 const ClassList = (props) => {
     const [classes, setClasses] = useState([]);
     let isLoggedIn = localStorage.getItem('token');
 
     useEffect(() => {
-        axios.get('http://anytimefitness.herokuapp.com/api/classes')
+        axios.get('https://anytimefitness.herokuapp.com/api/classes')
             .then(res => {
                 setClasses(res.data);
             })
@@ -17,11 +18,9 @@ const ClassList = (props) => {
                 console.error(err);
             })
     }, [])
-
     if(classes.length === 0){
         return <h2>No Classes Available at This Time</h2>
     }
-    console.log(classes);
     return(
         <div>
             <div>
@@ -33,7 +32,9 @@ const ClassList = (props) => {
                 ))}
             </div>
             <div>
-                {isLoggedIn && <Link to='/add-class'>Add a new Class</Link>}
+                <Button>
+                    {isLoggedIn && <Link to='/add-class'>Add a new Class</Link>}
+                </Button>
             </div>
         </div>
     )

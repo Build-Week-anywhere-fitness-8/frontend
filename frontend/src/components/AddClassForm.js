@@ -29,8 +29,9 @@ const ClassForm = (props) => {
     const handleSubmit = e => {
         e.preventDefault();
         axiosWithAuth()
-            .post("http://anytimefitness.herokuapp.com/api/classes", classState)
+            .post("https://anytimefitness.herokuapp.com/api/classes/create", classState)
                 .then(res => {
+                    console.log('i added a class')
                     props.setClassList(res.data);
                     push('/classlist');
                 })
@@ -66,10 +67,9 @@ const ClassForm = (props) => {
                             onChange={changeHandle}
                         >
                             <option>Cardio</option>
-                            <option>Aerobic</option>
-                            <option>Anaerobic</option>
-                            <option>Strength</option>
-                            <option>Lifestyle</option>
+                            <option>Stregth</option>
+                            <option>Yoga</option>
+                            <option>Calisthenics</option>
                         </Input>
                     </FormGroup>
                     <FormGroup>

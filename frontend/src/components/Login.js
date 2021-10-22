@@ -23,9 +23,7 @@ class Login extends React.Component {
         e.preventDefault();
         axios.post('https://anytimefitness.herokuapp.com/api/auth/login', this.state.credentials)
             .then(res => {
-                console.log(res);
                 localStorage.setItem('token', res.data.token);
-
                 this.props.history.push('/classlist')
             })
             .catch(err => {

@@ -13,11 +13,12 @@ function Home() {
     <div>
       <h3>Take Classes From Anywhere</h3>
       <div className='links-container'>
-      <Link className='links' to='/login'>Login</Link>
-      <Link className='links' to='/register'>Register</Link>
+        <Link className='links' to='/login'>Login</Link>
+        <Link className='links' to='/register'>Register</Link>
       </div>
       <div className='section-one'>
-        <div className='first-content'><Slider />
+        <div className='first-content'>
+          <Slider />
         </div>
         <div className='first-content'>
           <h1>Our Goal</h1>
@@ -27,25 +28,25 @@ function Home() {
         </div>
         <div><Cards /></div>
         <footer>
-     <div>
-        <h3>Connect With Us On Our Socials</h3>
-        <nav className="social">
-            <i class="fab fa-instagram"></i>
-            <i class="fab fa-facebook-square"></i>
-            <i class="fab fa-twitter-square"></i>
-        </nav>
-     </div>
-     <div>
-        <nav className="main">
-            <a href="#top">Home</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-     </div>
-     <div className="copyright">
-        <p>Copyright 2020</p>
-     </div>
- </footer>
+          <div>
+            <h3>Connect With Us On Our Socials</h3>
+            <nav className="social">
+              <i className="fab fa-instagram"></i>
+              <i className="fab fa-facebook-square"></i>
+              <i className="fab fa-twitter-square"></i>
+            </nav>
+          </div>
+          <div>
+            <nav className="main">
+              <a href="#top">Home</a>
+              <a href="#about">About</a>
+              <a href="#contact">Contact</a>
+            </nav>
+          </div>
+          <div className="copyright">
+            <p>Copyright 2020</p>
+          </div>
+        </footer>
       </div>
       <Route path='/login' component={Login} />
       <Route path='/register' component={Register} />
