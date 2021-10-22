@@ -22,7 +22,7 @@ const Monica = (props) => {
 
     return (
         <>
-            <Card className='mx-auto my-5 bg-light' style={{ width: '40%' }}>
+            <Card className='mx-auto my-5' style={{ width: '40%', backgroundColor: 'lightgray' }}>
                 <CardImg
                     src='https://avatars.githubusercontent.com/u/86384558?v=4'
                     alt='github user avatar'
@@ -30,7 +30,7 @@ const Monica = (props) => {
                 />
                 <CardBody>
                     <CardTitle>{monicaInfo.name}</CardTitle>
-                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/monicasalas86'>https://github.com/monicasalas86</CardLink></CardSubtitle>
+                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none', color: 'black' }} href='https://github.com/monicasalas86'>https://github.com/monicasalas86</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {monicaInfo.location}</CardSubtitle>
                     <CardText>Monica worked on the frontend with Redux and routing the website.</CardText>
                 </CardBody>

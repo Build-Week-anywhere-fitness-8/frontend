@@ -7,14 +7,17 @@ import Slider from "./Slider";
 import Cards from "./HomeCards";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Home.css'
+import Locales from "./LocationShowcase/Locales";
 
 function Home() {
   return (
     <div>
-      <h3>Take Classes From Anywhere</h3>
-      <div className='links-container'>
-        <Link className='links' to='/login'>Login</Link>
-        <Link className='links' to='/register'>Register</Link>
+      <div className='py-3' style={{ backgroundColor: 'lightgray' }}>
+        <h3 >Take Classes From Anywhere</h3>
+        <div className='links-container'>
+          <Link className='links' to='/login'>Login</Link>
+          <Link className='links' to='/register'>Register</Link>
+        </div>
       </div>
       <div className='section-one'>
         <div className='first-content'>
@@ -26,7 +29,13 @@ function Home() {
         </div>
         <div className='hero-image'>
         </div>
-        <div><Cards /></div>
+        <div className='w-100'>
+          <div className='text-white bg-dark py-4'>
+            <h2>World Class Locations in World Class Cities</h2>
+            <p className='mb-0'>We have a range of top quality gyms across the nation's top cities and are constantly expanding.</p>
+          </div>
+          <Locales></Locales>
+        </div>
         <footer>
           <div>
             <h3>Connect With Us On Our Socials</h3>

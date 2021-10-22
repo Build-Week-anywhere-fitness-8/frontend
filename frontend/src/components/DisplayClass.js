@@ -2,10 +2,10 @@ import React from "react";
 import { Card, CardTitle, CardText } from 'reactstrap';
 
 const DisplayClass = (props) => {
-    
+
     const { course } = props;
 
-    return(
+    return (
         <Card className='course-container'>
             <CardTitle>{course.class_name}</CardTitle>
             <CardText>
