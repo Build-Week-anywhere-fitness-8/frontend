@@ -22,7 +22,7 @@ const Irvin = (props) => {
 
     return (
         <>
-            <Card className='mx-auto my-5 bg-light' style={{ width: '40%' }}>
+            <Card className='mx-auto my-5 bg-secondary' style={{ width: '40%' }}>
                 <CardImg
                     src='https://avatars.githubusercontent.com/u/87495756?v=4'
                     alt='github user avatar'
@@ -30,8 +30,7 @@ const Irvin = (props) => {
                 />
                 <CardBody>
                     <CardTitle>{irvingInfo.name}</CardTitle>
-                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/IrvinA'>https://github.com/IrvinA</CardLink></CardSubtitle>
-                    {/* <CardSubtitle>Location: {irvingInfo.location}</CardSubtitle> */}
+                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none', color: 'black' }} href='https://github.com/IrvinA'>https://github.com/IrvinA</CardLink></CardSubtitle>
                     <CardText>Irvin worked on the fronted with Redux and routing the website.</CardText>
                 </CardBody>
             </Card>

@@ -22,7 +22,7 @@ const TraNequa = (props) => {
 
     return (
         <>
-            <Card className='mx-auto my-5 bg-light' style={{ width: '40%' }}>
+            <Card className='mx-auto my-5 bg-secondary' style={{ width: '40%' }}>
                 <CardImg
                     src='https://avatars.githubusercontent.com/u/86528475?v=4'
                     alt='github user avatar'
@@ -30,7 +30,7 @@ const TraNequa = (props) => {
                 />
                 <CardBody>
                     <CardTitle>{traNequaInfo.name}</CardTitle>
-                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/TraNequaFauntleroy'>https://github.com/TraNequaFauntleroy</CardLink></CardSubtitle>
+                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none', color: 'black' }} href='https://github.com/TraNequaFauntleroy'>https://github.com/TraNequaFauntleroy</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {traNequaInfo.location}</CardSubtitle>
                     <CardText>TraNequa worked on creating the backend for the aplication using Node.js.</CardText>
                 </CardBody>

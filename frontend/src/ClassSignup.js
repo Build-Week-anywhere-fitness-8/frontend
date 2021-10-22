@@ -77,15 +77,15 @@ const ClassSignup = (props) => {
     // console.log(classes)
     // console.log(classesInput)
     return (
-        <>
+        <div className='pt-3'>
             <Form
                 onSubmit={onSubmit}
                 style={{
                     border: 'solid 1px grey',
                     borderRadius: '.5rem',
-                    margin: '3rem',
-                    marginLeft: '25%',
-                    marginRight: '25%',
+                    // margin: '3rem',
+                    marginLeft: '30%',
+                    marginRight: '30%',
                     padding: '2rem',
                     backgroundColor: 'lightgray'
                 }}>
@@ -111,7 +111,7 @@ const ClassSignup = (props) => {
                     <Button>Confirm</Button>
                 </FormGroup>
             </Form>
-        </>
+        </div>
     )
 
 }

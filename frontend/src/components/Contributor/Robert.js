@@ -22,7 +22,7 @@ const Robert = (props) => {
 
     return (
         <>
-            <Card className='mx-auto my-5 bg-light' style={{ width: '40%' }}>
+            <Card className='mx-auto my-5 bg-secondary' style={{ width: '40%' }}>
                 <CardImg
                     src='https://avatars.githubusercontent.com/u/64812950?v=4'
                     alt='github user avatar'
@@ -30,7 +30,7 @@ const Robert = (props) => {
                 />
                 <CardBody>
                     <CardTitle>{robertInfo.name}</CardTitle>
-                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/RobertVonDerBecke'>https://github.com/RobertVonDerBecke</CardLink></CardSubtitle>
+                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none', color: 'black' }} href='https://github.com/RobertVonDerBecke'>https://github.com/RobertVonDerBecke</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {robertInfo.location}</CardSubtitle>
                     <CardText>Robert worked on the frontend.</CardText>
                 </CardBody>

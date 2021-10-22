@@ -23,7 +23,7 @@ const George = (props) => {
     return (
 
         <>
-            <Card className='mx-auto my-5 bg-light' style={{ width: '40%' }}>
+            <Card className='mx-auto my-5 bg-secondary' style={{ width: '40%' }}>
                 <CardImg
                     src='https://avatars.githubusercontent.com/u/65411983?v=4'
                     alt='github user avatar'
@@ -31,7 +31,7 @@ const George = (props) => {
                 />
                 <CardBody>
                     <CardTitle>{georgeInfo.name}</CardTitle>
-                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/cavazosgeorge'>https://github.com/cavazosgeorge</CardLink></CardSubtitle>
+                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none', color: 'black' }} href='https://github.com/cavazosgeorge'>https://github.com/cavazosgeorge</CardLink></CardSubtitle>
                     <CardSubtitle>Location: {georgeInfo.location}</CardSubtitle>
                     <CardText>George worked on creating the backend for the application using Node.js.</CardText>
                 </CardBody>

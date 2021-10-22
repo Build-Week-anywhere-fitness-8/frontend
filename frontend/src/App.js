@@ -39,9 +39,13 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <header>
-          <h1>Anywhere Fitness</h1>
-          <Nav pills className="navBar">
+        <header style={{ backgroundColor: 'lightgray' }}>
+          <h1 className='py-3'>
+            <Link style={{ textDecoration: 'none', color: 'black' }} to='/'>
+              Anywhere Fitness
+            </Link>
+          </h1>
+          <Nav pills className="navBar bg-dark">
             <NavItem>
               <NavLink href="#"><Link className='item' to="/">Home</Link></NavLink>
             </NavItem>
