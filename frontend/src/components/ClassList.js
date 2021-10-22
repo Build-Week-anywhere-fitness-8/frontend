@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { Button } from 'reactstrap';
 import ClassForm from "./AddClassForm";
 import ClassSignup from "../ClassSignup";
+import Cards from './HomeCards'
 
 const ClassList = (props) => {
     const [classes, setClasses] = useState([]);
@@ -35,6 +36,7 @@ const ClassList = (props) => {
                 {isLoggedIn && <Button><Link to='/add-class'>Add a new Class</Link></Button>}
 
             </div>
+            <div><Cards /></div>
         </div>
     )
 }
