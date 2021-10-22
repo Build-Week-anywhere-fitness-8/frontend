@@ -32,42 +32,49 @@ function App() {
 
   useEffect(() => {
     axios.get('http://anytimefitness.herokuapp.com/api/classes')
-        .then(res => {
-            setClassList([
-                ...classList,
-                res.data
-            ]);
-        })
-        .catch(err => {
-            console.error(err);
-        })
-}, [])
-
+      .then(res => {
+        setClassList([
+          ...classList,
+          res.data
+        ]);
+      })
+      .catch(err => {
+        console.error(err);
+      })
+  }, [])
+  console.log(classList)
   return (
 
     <Router>
 
       <div className="App">
-
-        {/* @ unit 2 - feel free to change styling on anything you'd like -monica */}
-
-        <header>
-          <h1>Anywhere Fitness</h1>
-          <Nav pills className="navBar">
+        <header style={{ backgroundColor: 'lightgray' }}>
+          <h1 className='py-3'>
+            <Link style={{ textDecoration: 'none', color: 'black' }} to='/'>
+              Anywhere Fitness
+            </Link>
+          </h1>
+          <Nav pills className="navBar bg-dark d-flex justify-content-center">
             <NavItem>
               <NavLink href="#"><Link className='item' to="/">Home</Link></NavLink>
             </NavItem>
-
-            <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}>
-              <DropdownToggle nav caret>
-                <span className='item'>Classes</span>
-              </DropdownToggle>
-              <DropdownMenu>
-                {classList.map(c => {<DropdownItem>{c.class_name}</DropdownItem>})}
+            {/* The nav section requires further refactoring or deletion of some nav items */}
+            {/* <Dropdown nav isOpen={dropdownOpen} toggle={toggleClasses}> */}
+            {/* <DropdownToggle nav caret> */}
+            <NavItem>
+              <NavLink href='#'>
+                <Link className='item' to='/classlist'>
+                  Classes
+                </Link>
+              </NavLink>
+            </NavItem>
+            {/* </DropdownToggle> */}
+            {/* <DropdownMenu>
+                {classList.map(c => { <DropdownItem>{c.class_name}</DropdownItem> })}
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
 
-            <Dropdown nav isOpen={dropdownLocations} toggle={toggleLocations}>
+            {/* <Dropdown nav isOpen={dropdownLocations} toggle={toggleLocations}>
               <DropdownToggle nav caret>
                 <span className='item'>Locations</span>
               </DropdownToggle>
@@ -77,7 +84,7 @@ function App() {
                 <DropdownItem>New York</DropdownItem>
                 <DropdownItem>California</DropdownItem>
               </DropdownMenu>
-            </Dropdown>
+            </Dropdown> */}
             <NavItem>
               <NavLink href="#"><Link className='item' to='/about'>About</Link></NavLink>
             </NavItem>
@@ -87,8 +94,8 @@ function App() {
 
         <Switch>
           <PrivateRoute path='/logout' component={Logout} />
-          <PrivateRoute path='/add-class' component={ClassForm}/>
-          <Route path='/classlist' component={ClassList}/>
+          <PrivateRoute path='/add-class' component={ClassForm} />
+          <Route path='/classlist' component={ClassList} />
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
@@ -96,7 +103,7 @@ function App() {
 
         </Switch>
       </div>
-    </Router>
+    </Router >
   );
 }
 

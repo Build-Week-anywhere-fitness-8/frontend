@@ -22,7 +22,7 @@ const Anthony = (props) => {
 
     return (
         <>
-            <Card className='mx-auto my-5 bg-light' style={{ width: '40%' }}>
+            <Card className='mx-auto my-5' style={{ width: '40%', backgroundColor: 'lightgray' }}>
                 <CardImg
                     src='https://avatars.githubusercontent.com/u/80369725?v=4'
                     alt='github user avatar'
@@ -30,7 +30,7 @@ const Anthony = (props) => {
                 />
                 <CardBody>
                     <CardTitle>{anthonyInfo.name}</CardTitle>
-                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none' }} href='https://github.com/aamay022'>https://github.com/aamay022</CardLink></CardSubtitle>
+                    <CardSubtitle>Github: <CardLink style={{ textDecoration: 'none', color: 'black' }} href='https://github.com/aamay022'>https://github.com/aamay022</CardLink></CardSubtitle>
                     <CardSubtitle>Locale: {anthonyInfo.location}</CardSubtitle>
                     <CardText>Anthony worked on the frontend with Reactstrap/Bootstrap to style the site.</CardText>
                 </CardBody>

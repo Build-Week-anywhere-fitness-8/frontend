@@ -16,8 +16,8 @@ const About = () => {
 
 
     return (
-        <>
-            <Jumbotron className='m-5 p-4 border rounded bg-dark text-white'>
+        <div className='bg-secondary'>
+            <Jumbotron className='p-4 bg-dark text-white'>
                 <h1>About</h1>
                 <p>This site was made by a student team from Lambda Web for a Build week project.
                     Below are the team members and their info.
@@ -45,7 +45,7 @@ const About = () => {
                     <p>Copyright© 2020</p>
                 </div>
             </footer>
-        </>
+        </div>
     )
 
 }
