@@ -20,7 +20,6 @@ import { Nav, NavItem, NavLink } from 'reactstrap';
 
 
 function App() {
-
   const [classList, setClassList] = useState([])
 
   useEffect(() => {
@@ -58,14 +57,17 @@ function App() {
             <NavItem>
               <NavLink href="#"><Link className='item' to='/about'>About</Link></NavLink>
             </NavItem>
+            <NavItem>
+              <NavLink href='#'><Link className='item' to='/logout'>Logout</Link></NavLink>
+            </NavItem>
           </Nav>
 
         </header>
 
         <Switch>
-          <PrivateRoute path='/logout' component={Logout} />
           <PrivateRoute path='/add-class' component={ClassForm} />
           <PrivateRoute path='/classlist' component={ClassList} />
+          <PrivateRoute path='/logout' component={Logout} />
           <Route path='/about' component={About} />
           <Route path='/register' component={Register} />
           <Route path='/login' component={Login} />
